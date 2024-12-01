@@ -2,16 +2,7 @@ use crate::helpers;
 
 pub fn run() {
     let input: String = helpers::read_file_contents(1);
-<<<<<<< HEAD
-    let part_a_result: String = part_a(&input);
-    let part_b_result: String = part_b(&input);
-
-    println!("{}", part_a_result);
-    println!("{}", part_b_result);
-}
-
-fn part_a(input: &str) -> String {
-=======
+    
     let part_a_result: u32 = part_a(&input);
     let part_b_result: u128 = part_b(&input);
 
@@ -20,7 +11,6 @@ fn part_a(input: &str) -> String {
 }
 
 fn part_a(input: &str) -> u32 {
->>>>>>> 8d13c89 (Day 1 of advent of code)
     // Split the input by lines, then build up two arrays by splitting by whitespace
     let (mut left, mut right) = get_lists(input);
     // Sort the arrays from smallest to largest
@@ -36,17 +26,10 @@ fn part_a(input: &str) -> u32 {
         diff += u32::try_from((x - y).abs()).ok().unwrap();
     }
 
-<<<<<<< HEAD
-    format!("The total distance is {diff}.")
-}
-
-fn part_b(input: &str) -> String {
-=======
     diff
 }
 
 fn part_b(input: &str) -> u128 {
->>>>>>> 8d13c89 (Day 1 of advent of code)
     let (left, right): (Vec<i32>, Vec<i32>) = get_lists(input);
 
     // Store the total similarity score
@@ -65,11 +48,7 @@ fn part_b(input: &str) -> u128 {
         similarity_score += matches * u128::try_from(num).ok().unwrap();
     }
 
-<<<<<<< HEAD
-    format!("Similarity score is {similarity_score}.")
-=======
     similarity_score
->>>>>>> 8d13c89 (Day 1 of advent of code)
 }
 
 fn get_lists(input: &str) -> (Vec<i32>, Vec<i32>) {
@@ -83,8 +62,6 @@ fn get_lists(input: &str) -> (Vec<i32>, Vec<i32>) {
     }
     (left, right)
 }
-<<<<<<< HEAD
-=======
 
 #[cfg(test)]
 mod test_day1 {
@@ -104,4 +81,3 @@ mod test_day1 {
         assert_eq!(expected_similarity, part_b(input))
     }
 }
->>>>>>> 8d13c89 (Day 1 of advent of code)
