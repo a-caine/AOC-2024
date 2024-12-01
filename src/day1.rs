@@ -2,7 +2,7 @@ use crate::helpers;
 
 pub fn run() {
     let input: String = helpers::read_file_contents(1);
-    
+
     let part_a_result: u32 = part_a(&input);
     let part_b_result: u128 = part_b(&input);
 
