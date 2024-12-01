@@ -1,3 +1,20 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+    if args.len() < 2 {
+        println!("Please specify the day you wish to run.");
+        return;
+    }
+    let day: &String = &args[1];
+
+    println!("Running solution for day {day}");
+    match day.as_str() {
+        "1" => day1::run(),
+        _ => println!("Soltuion for day {day} not implemented yet"),
+    }
 }
+
+// Modules for solutions
+mod day1;
+mod helpers;
