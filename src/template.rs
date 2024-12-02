@@ -19,7 +19,7 @@ fn part_b(input: &str) -> String {
 }
 
 #[cfg(test)]
-mod test_day1 {
+mod test_dayX {
     use super::*;
 
     #[test]

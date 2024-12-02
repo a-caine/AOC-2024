@@ -11,10 +11,12 @@ fn main() {
     println!("Running solution for day {day}");
     match day.as_str() {
         "1" => day1::run(),
+        "2" => day2::run(),
         _ => println!("Soltuion for day {day} not implemented yet"),
     }
 }
 
 // Modules for solutions
 mod day1;
+mod day2;
 mod helpers;
