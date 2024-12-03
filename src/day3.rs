@@ -10,7 +10,7 @@ pub fn run() {
     println!("Answer for part b: {}", part_b_result);
 }
 
-fn is_multiple_instruction(substring: &str) -> u64 {
+fn is_multiply_instruction(substring: &str) -> u64 {
     // Check if the first part of the substring is 'mul('
     if &substring[..4] != "mul(" {
         return 0;
@@ -53,7 +53,7 @@ fn part_a(input: &str) -> String {
     for line in input.lines() {
         // Iterate through each line by character
         for num in 0..line.len() - 7 {
-            total_multiplication += is_multiple_instruction(&line[num..]);
+            total_multiplication += is_multiply_instruction(&line[num..]);
         }
     }
     format!("{}", total_multiplication)
@@ -66,7 +66,7 @@ fn part_b(input: &str) -> String {
         for num in 0..line.len() - 7 {
             if enabled {
                 // Check for multiplication
-                total_multiplication += is_multiple_instruction(&line[num..]);
+                total_multiplication += is_multiply_instruction(&line[num..]);
 
                 // Check for don't instruction
                 if &line[num..num + 7] == "don't()" {
