@@ -12,6 +12,7 @@ fn main() {
     match day.as_str() {
         "1" => day1::run(),
         "2" => day2::run(),
+        "3" => day3::run(),
         _ => println!("Soltuion for day {day} not implemented yet"),
     }
 }
@@ -19,4 +20,5 @@ fn main() {
 // Modules for solutions
 mod day1;
 mod day2;
+mod day3;
 mod helpers;
