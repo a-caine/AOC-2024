@@ -11,11 +11,11 @@ pub fn run() {
 }
 
 fn part_a(input: &str) -> String {
-    "Implement me"
+    String::from("Implement me")
 }
 
 fn part_b(input: &str) -> String {
-    "Implement me"
+    String::from("Implement me")
 }
 
 #[cfg(test)]
@@ -25,14 +25,14 @@ mod test_dayX {
     #[test]
     fn test_part_a() {
         let input: &str = "";
-        let expected_answer: String = "";
+        let expected_answer: String = String::from("");
         assert_eq!(expected_answer, part_a(input))
     }
 
     #[test]
     fn test_part_b() {
         let input: &str = "";
-        let expected_answer: String = "";
+        let expected_answer: String = String::from("");
         assert_eq!(expected_answer, part_b(input))
     }
 }
