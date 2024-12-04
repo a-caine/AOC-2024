@@ -23,29 +23,12 @@ fn get_char(grid: &[Vec<char>], x: i32, y: i32) -> Option<&char> {
 
 fn check_all_xmas(grid: &[Vec<char>], x: i32, y: i32) -> u32 {
     let mut xmas_count = 0;
-    if check_xmas(grid, x, y, (0, 1)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (0, -1)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (1, 0)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (-1, 0)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (1, 1)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (1, -1)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (-1, 1)) {
-        xmas_count += 1;
-    }
-    if check_xmas(grid, x, y, (-1, -1)) {
-        xmas_count += 1;
+    for i in -1..=1 {
+        for j in -1..=1 {
+            if check_xmas(grid, x, y, (i, j)) {
+                xmas_count += 1;
+            }
+        }
     }
     xmas_count
 }
