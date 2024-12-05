@@ -1,7 +1,5 @@
 use crate::helpers;
 
-// const PUZZLE_SIZE: i32 = 140;
-
 pub fn run() {
     let input: String = helpers::read_file_contents(4);
 
